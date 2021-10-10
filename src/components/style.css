@@ -1,33 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+}
 
 body {
   --background: #eee0cb;
   --content-background: #baa898;
   --text: #280003;
   --font: "poppins", sans-serif;
+  margin: 0;
   background-color: var(--background);
   font-family: var(--font);
-}
-
-body {
-  width: 100%;
+  overflow: hidden;
 }
 
 body * {
   font-family: var(--font);
 }
 
+.title {
+  font-family: "Dancing Script";
+  text-align: center;
+  font-size: 70px;
+  margin: 30px 0;
+}
+
 #content {
   width: 80%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 15px 30px;
   background-color: var(--content-background);
   border-radius: 25px;
+  max-height: calc(100% - 237px);
+  overflow-x: scroll;
 }
 
-#content img {
+#background {
+  position: absolute;
+  z-index: -10;
   width: 100%;
+  height: calc(100% + 30px);
   opacity: 0.5;
+  margin-top: -30px;
 }
 
 .nav {
@@ -37,10 +55,14 @@ body * {
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  width: fit-content;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+  background-color: var(--content-background);
+  border-radius: 25px;
 }
 
 .nav li {
@@ -50,7 +72,6 @@ body * {
 
 .nav li {
   position: relative;
-  background-color: var(--background);
   font-size: 22px;
   color: var(--text);
   border: none;

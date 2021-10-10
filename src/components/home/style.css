@@ -1,0 +1,27 @@
+.home-page {
+  width: 100%;
+  height: 100%;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.heading h2 {
+  font-weight: 550;
+  margin: 15px 0;
+  font-size: 45px;
+}
+
+.heading p {
+  margin: 15px 0;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 25%;
+  aspect-ratio: 1;
+}

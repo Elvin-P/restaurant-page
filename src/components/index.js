@@ -1,4 +1,5 @@
 import homePage from "./home/index.js";
+import Restaurant from "../images/restaurant.jpeg";
 import "./style.css";
 
 const body = document.querySelector("body");
@@ -10,8 +11,20 @@ const setContent = (component) => {
   content.appendChild(component);
 };
 
-// Add navbar to index
+// Init
 (() => {
+  // Background image
+  const img = new Image();
+  img.src = Restaurant;
+  img.id = "background";
+  body.appendChild(img);
+
+  // Title
+  const title = document.createElement("h1");
+  title.textContent = "La Doris";
+  title.classList.add("title");
+  body.appendChild(title);
+
   const navBar = document.createElement("ul");
   navBar.classList.add("nav");
   navBar.appendChild(
@@ -40,6 +53,7 @@ const setContent = (component) => {
       button.id = "menu";
       button.setAttribute("type", "radio");
       button.setAttribute("name", "page");
+      button.addEventListener("click", () => setContent());
       li.appendChild(button);
       li.appendChild(label);
       return li;
@@ -55,6 +69,7 @@ const setContent = (component) => {
       button.id = "contact";
       button.setAttribute("type", "radio");
       button.setAttribute("name", "page");
+      button.addEventListener("click", () => setContent());
       li.appendChild(button);
       li.appendChild(label);
       return li;

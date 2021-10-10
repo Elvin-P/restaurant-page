@@ -1,15 +1,27 @@
-import Restaurant from "../../images/restaurant.jpeg";
+import D from "../../images/CapD.svg";
+import "./style.css";
 
 export default function homePage() {
-  const heading = document.createElement("h2");
-  heading.textContent = "Welcome to La Doris!";
-
-  const img = new Image();
-  img.src = Restaurant;
-
   const component = document.createElement("div");
+  component.classList.add("home-page");
+
+  const heading = document.createElement("div");
+  heading.classList.add("heading");
+
+  const goodFood = document.createElement("h2");
+  goodFood.textContent = "We love good food!";
+  heading.appendChild(goodFood);
+
+  const since = document.createElement("p");
+  since.textContent = "Making the best food in the world since 29th Oct 2020";
+  heading.appendChild(since);
+
   component.appendChild(heading);
-  component.appendChild(img);
+
+  const logo = new Image();
+  logo.src = D;
+  logo.classList.add("logo");
+  component.appendChild(logo);
 
   return component;
 }
