@@ -1,0 +1,32 @@
+.grid-container {
+  height: fit-content;
+  margin: auto auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  grid-auto-rows: max-content;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1;
+}

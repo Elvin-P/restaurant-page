@@ -1,4 +1,5 @@
-import homePage from "./home/index.js";
+import homePage from "./home";
+import menu from "./menu";
 import Restaurant from "../images/restaurant.jpeg";
 import "./style.css";
 
@@ -53,7 +54,7 @@ const setContent = (component) => {
       button.id = "menu";
       button.setAttribute("type", "radio");
       button.setAttribute("name", "page");
-      button.addEventListener("click", () => setContent());
+      button.addEventListener("click", () => setContent(menu()));
       li.appendChild(button);
       li.appendChild(label);
       return li;
